@@ -7,36 +7,37 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-	<h3>This is Test front end to test action cable</h3>
-	<hr>
-	<label id="channel"></label>
-	<h4>Subscribe a channel with action cable</h4>
+	<h3>Client will test action cable connection</h3>
+  <hr>
+  <label id="channel"></label>
+  <h4>Subscribe a channel with action cable</h4>
 
-	<label>Action cable base url (http://mydomain/cable)</label><br>
-	<input type="text" id="base_cable_url" placeholder="http://mydomain/cable"><br><br>
+  <label>Action cable base url (http://mydomain/cable)</label><br>
+  <input type="text" id="base_cable_url" placeholder="http://mydomain/cable"><br><br>
 
-	<label>Query parameter key name ('access_token')</label><br>
-	<input type="text" id="query_key" placeholder="access_token"><br><br>
+  <label>Query parameter key name ('access_token')</label><br>
+  <input type="text" id="query_key" placeholder="access_token"><br><br>
 
-	<label>Channel Name ('ChannelName')</label><br>
-	<input type="text" id="channel_name" placeholder="NotifyChannel"><br><br>
+  <label>Channel Name ('ChannelName')</label><br>
+  <input type="text" id="channel_name" placeholder="NotifyChannel"><br><br>
 
-	<label>Query parameter value name ('access_token_value_xxxxxxxxxxxxxx')</label><br>
-	<textarea placeholder="Token value of above key for authentication" rows="10" id="query_value"></textarea> <br><br>
+  <label>Query parameter value name ('access_token_value_xxxxxxxxxxxxxx')</label><br>
+  
+  <textarea placeholder="Token value of above key for authentication" rows="10" id="query_value"></textarea> <br><br>
 
 
-	<button id="connection_request"> Connect </button><br><br>
-	Connection Status / Received data: <br>
+  <button id="connection_request"> Connect </button><br><br>
+  Connection Status / Received data: <br>
+  <div id="endpoint" style="color: brown;"></div>
+  <textarea style="color: darkgreen;"  placeholder="Do not change here. This will automatically updated" rows="10" id="response_area">Not initiated</textarea>
+  <br><br>
 
-	<textarea placeholder="Do not change here. This will automatically updated" rows="10" id="response_area">Not initiated</textarea>
-	<br><br>
-
-	<hr>
-	<label>
-		Broadcast something on subscribed channel
-	</label>
-	<input type="text" id="typed_msg">
-	<button id="send_msg"> Send </button>
+  <hr>
+  <label>
+    Broadcast something on subscribed channel
+  </label>
+  <input type="text" id="typed_msg">
+  <button id="send_msg"> Send </button>
 
 	<script type="text/javascript" src="./assets/js/cable.js"></script>
 </body>
